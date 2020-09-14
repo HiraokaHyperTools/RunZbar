@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net40</TargetFramework>
 
     <PackageId>RunZbar</PackageId>
-    <Version>0.1.3</Version>
+    <Version>0.1.5</Version>
     <Authors>kenjiuno</Authors>
     <Company>HiraokaHyperTools</Company>
     <Description>The attached zbarimg.exe Win32 command line based on zbar will decode bar codes from image files.</Description>
@@ -14,14 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Pack="true" Update="Install.ps1" PackagePath="tools/Install.ps1">
-    </None>
     <None Pack="true" Update="RunZbar.targets" PackagePath="build/RunZbar.targets">
     </None>
 
-    <None Pack="true" Update="zbarimg.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
+    <None Pack="true" Update="zbarimg.exe" PackagePath="binaryFiles/zbarimg.exe">
     </None>
   </ItemGroup>
 
